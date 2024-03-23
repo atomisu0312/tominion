@@ -1,7 +1,7 @@
 export default function DeckPage(){
   return(
-  <>
-    <span>ここはデッキページです</span>
-  </>
+    <>
+      <span>ここはデッキページです</span>
+    </>
   )
 }
