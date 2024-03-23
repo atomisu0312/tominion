@@ -3,11 +3,10 @@ import viteLogo from '/vite.svg'
 
 interface Props {
   to: string,
-  name: string,
-  children: JSX.Element
+  name: string
 };
 
-export default function MyLink({to, name, children}: Props){
+export default function MyLink({to, name}: Props){
   return (
     <>
       <Link to={to}>
