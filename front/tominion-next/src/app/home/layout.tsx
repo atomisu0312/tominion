@@ -12,7 +12,11 @@ export default function RootLayout({
 
       <body className={`antialiased`}>
         <Header />
-        {children}
+        <div className="grid grid-cols-12">
+          <div className="col-span-2"></div>
+          <div className="col-span-8">{children}</div>
+          <div className="col-span-2"></div>
+        </div>
         <Footer/>
       </body>
     </html>
