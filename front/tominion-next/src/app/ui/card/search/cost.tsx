@@ -1,4 +1,3 @@
-'use client'
 import {setCostMin, setCostMax} from '@/lib/features/home/card/search/seachSlice'
 import { useSelector, useDispatch } from 'react-redux';
 import type { RootState } from '@/lib/store';
