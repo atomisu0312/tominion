@@ -1,8 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
+import cardSearchReducer from '@/lib/features/home/card/search/seachSlice'
 
 export const makeStore = () => {
   return configureStore({
-    reducer: {}
+    reducer: {cardSearch: cardSearchReducer}
   })
 }
 
