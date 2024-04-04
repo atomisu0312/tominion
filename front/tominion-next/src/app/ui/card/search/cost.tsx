@@ -4,14 +4,6 @@ import {useAppDispatch, useAppSelector, useAppStore} from '@/lib/hooks'
 import Coin from './cost/coin';
 export default function Cost(){
   const dispatch = useAppDispatch();
-  
-  const handleClick1 = () => {
-    dispatch(setCostMin(3));
-  }
-
-  const handleClick2 = () => {
-    dispatch(setCostMin(6));
-  }
 
   const ulStyle: React.CSSProperties = {
     display: 'flex',
@@ -24,9 +16,9 @@ export default function Cost(){
 
   return(
   <>
-    <div className="bg-yellow-0 h-full mx-3" style={ulStyle}>
+    <div className="h-full mx-3" style={ulStyle}>
         {[...Array(10)].map((_, i) => i).map(e => {
-          return(<Coin valueNum ={e}/>);
+          return(<Coin valueNum ={e} key={e}/>);
         }) }
     </div>
   </>)

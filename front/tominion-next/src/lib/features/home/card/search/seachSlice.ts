@@ -7,8 +7,8 @@ type State ={
 }
 
 const initialState: State = {
-  costMin: undefined,
-  costMax: undefined,
+  costMin: 0,
+  costMax: 999,
 }
 
 export const searchSlice =  createSlice({
