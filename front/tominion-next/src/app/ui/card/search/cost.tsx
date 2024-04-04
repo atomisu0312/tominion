@@ -25,7 +25,7 @@ export default function Cost(){
   return(
   <>
     <div className="bg-yellow-0 h-full mx-3" style={ulStyle}>
-        {[...Array(8)].map((_, i) => i).map(e => {
+        {[...Array(10)].map((_, i) => i).map(e => {
           return(<Coin valueNum ={e}/>);
         }) }
     </div>

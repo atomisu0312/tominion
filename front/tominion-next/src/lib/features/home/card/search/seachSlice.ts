@@ -21,7 +21,20 @@ export const searchSlice =  createSlice({
     setCostMax:(state, action:PayloadAction<number | undefined>) =>{
       state.costMax = action.payload
     },
+    setCostMinMax:(state, action:PayloadAction<number>) => {
+      if (state.costMax == null || state.costMin == null){
+        state.costMax = action.payload;
+        state.costMin = action.payload;
+      }else if (state.costMin < action.payload && state.costMax > action.payload){
+        state.costMax = action.payload;
+        state.costMin = action.payload;
+      }else if (state.costMin >= action.payload){
+        state.costMin = action.payload;
+      }else if (state.costMax <= action.payload){
+        state.costMax = action.payload;
+      }
+    }
   }
 });
-export const {setCostMin, setCostMax} = searchSlice.actions;
+export const {setCostMin, setCostMax, setCostMinMax} = searchSlice.actions;
 export default searchSlice.reducer;
