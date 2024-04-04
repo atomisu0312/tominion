@@ -4,11 +4,13 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 type State ={
   costMin: undefined | number;
   costMax: undefined | number;
+  searchWord: undefined | String;
 }
 
 const initialState: State = {
-  costMin: 0,
-  costMax: 999,
+  costMin: undefined,
+  costMax: undefined,
+  searchWord: undefined
 }
 
 export const searchSlice =  createSlice({
@@ -33,8 +35,11 @@ export const searchSlice =  createSlice({
       }else if (state.costMax <= action.payload){
         state.costMax = action.payload;
       }
+    },
+    setSearchWord:(state, action:PayloadAction<String>) => {
+      state.searchWord = action.payload;
     }
   }
 });
-export const {setCostMin, setCostMax, setCostMinMax} = searchSlice.actions;
+export const {setCostMin, setCostMax, setCostMinMax, setSearchWord} = searchSlice.actions;
 export default searchSlice.reducer;
