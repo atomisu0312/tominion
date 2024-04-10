@@ -5,6 +5,7 @@ export default function SearchResult(){
   const costMin = useSelector((state: RootState) => state.cardSearch.costMin);
   const costMax = useSelector((state: RootState) => state.cardSearch.costMax);
   const searchWord = useSelector((state: RootState) => state.cardSearch.searchWord);
+  const cardKindList = useSelector((state: RootState) => state.cardSearch.cardKindList);
 
   return(
   <>
@@ -15,6 +16,9 @@ export default function SearchResult(){
     </div>
     <div className="w-full">
       <span>{`検索ワード：${searchWord}`}</span>
+    </div>
+    <div className = "w-full">
+      <span>{`種別：${cardKindList}`}</span>
     </div>
   </>)
 } 
