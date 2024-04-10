@@ -6,6 +6,7 @@ export default function SearchResult(){
   const costMax = useSelector((state: RootState) => state.cardSearch.costMax);
   const searchWord = useSelector((state: RootState) => state.cardSearch.searchWord);
   const cardKindList = useSelector((state: RootState) => state.cardSearch.cardKindList);
+  const cardAttributeList = useSelector((state: RootState) => state.cardSearch.cardAttributeList);
 
   return(
   <>
@@ -19,6 +20,9 @@ export default function SearchResult(){
     </div>
     <div className = "w-full">
       <span>{`種別：${cardKindList}`}</span>
+    </div>
+    <div className = "w-full">
+      <span>{`属性：${cardAttributeList}`}</span>
     </div>
   </>)
 } 

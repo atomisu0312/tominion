@@ -3,6 +3,7 @@ import KindLabel from "./kind/kindLabel";
 import AttrLabel from "./attr/attrLabel";
 import AttrSelectButton from "./attr/attrSelectButton";
 import {CardKind} from "@/lib/features/home/card/search/cardKind";
+import { CardAttribute } from "@/lib/features/home/card/search/cardAttribute";
 
 export default function CardKindComponent(){
   return(
@@ -28,16 +29,16 @@ export default function CardKindComponent(){
           <AttrLabel labelStr = "属性"/>
         </div>
         <div className ="col-span-2 row-span-1">
-          <AttrSelectButton labelStr = "なし"/>
+          <AttrSelectButton labelStr = "なし" cardAttribute={CardAttribute.None} />
         </div>
         <div className ="col-span-2 row-span-1">
-          <AttrSelectButton labelStr = "アタック"/>
+          <AttrSelectButton labelStr = "アタック" cardAttribute={CardAttribute.Attack}/>
         </div>
         <div className ="col-span-2 row-span-1">
-          <AttrSelectButton labelStr = "リアクション"/>
+          <AttrSelectButton labelStr = "リアクション" cardAttribute={CardAttribute.Reaction}/>
         </div>
         <div className ="col-span-2 row-span-1">
-          <AttrSelectButton labelStr = "持続"/>
+          <AttrSelectButton labelStr = "持続" cardAttribute={CardAttribute.Duration}/>
         </div>
       </div>
     </div>

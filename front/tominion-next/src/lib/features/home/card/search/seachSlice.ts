@@ -1,12 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import type { CardKind } from "@/lib/features/home/card/search/cardKind";
+import type { CardAttribute } from "@/lib/features/home/card/search/cardAttribute";
 
 type State ={
   costMin: undefined | number;
   costMax: undefined | number;
   searchWord: undefined | String;
   cardKindList: CardKind[];
+  cardAttributeList: CardAttribute[];
 }
 
 const initialState: State = {
@@ -14,6 +16,7 @@ const initialState: State = {
   costMax: undefined,
   searchWord: undefined,
   cardKindList: [],
+  cardAttributeList: [],
 }
 
 export const searchSlice =  createSlice({
@@ -50,8 +53,17 @@ export const searchSlice =  createSlice({
       }else{
         state.cardKindList.splice(index, 1); 
       }
+    },
+    handleCardAttributeList:(state, action:PayloadAction<CardAttribute>) => {
+      const index = state.cardAttributeList.indexOf(action.payload);
+      if (index === -1){
+        state.cardAttributeList.push(action.payload);
+      }else{
+        state.cardAttributeList.splice(index, 1);
+      }
     }
+
   }
 });
-export const {setCostMin, setCostMax, setCostMinMax, setSearchWord, handleCardKindList} = searchSlice.actions;
+export const {setCostMin, setCostMax, setCostMinMax, setSearchWord, handleCardKindList, handleCardAttributeList} = searchSlice.actions;
 export default searchSlice.reducer;
