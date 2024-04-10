@@ -9,8 +9,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-
-      <body className={`antialiased`}>
+      <body>
         <Header />
         <div className="grid grid-cols-12">
           <div className="col-span-2"></div>

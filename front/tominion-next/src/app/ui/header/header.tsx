@@ -13,7 +13,8 @@ export default function Header(){
         <MyLink to="/home/team" name="team"></MyLink>
         <MyLink to="/home/history" name="history"></MyLink>
       </div>
-    </>
+    </> 
+    
     </>
   )
 }
