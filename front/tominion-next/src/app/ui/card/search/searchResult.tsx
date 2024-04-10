@@ -7,6 +7,7 @@ export default function SearchResult(){
   const searchWord = useSelector((state: RootState) => state.cardSearch.searchWord);
   const cardKindList = useSelector((state: RootState) => state.cardSearch.cardKindList);
   const cardAttributeList = useSelector((state: RootState) => state.cardSearch.cardAttributeList);
+  const cardOwner = useSelector((state: RootState) => state.cardSearch.cardOwner);
 
   return(
   <>
@@ -23,6 +24,9 @@ export default function SearchResult(){
     </div>
     <div className = "w-full">
       <span>{`属性：${cardAttributeList}`}</span>
+    </div>
+    <div className = "w-full">
+      <span>{`オーナー：${cardOwner}`}</span>
     </div>
   </>)
 } 
