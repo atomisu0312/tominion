@@ -1,9 +1,10 @@
+'use client'
 import { useSelector } from 'react-redux';
-import { RootState } from '@/lib/store';
+import { RootState } from '@/lib/features/home/card/store';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { useDebouncedCallback } from 'use-debounce';
 import { setSearchWord } from '@/lib/features/home/card/search/seachSlice'
-import {useAppDispatch, useAppSelector, useAppStore} from '@/lib/hooks'
+import {useAppDispatch, useAppSelector} from '@/lib/hooks'
 
 export default function Namebox(){
   const dispatch = useAppDispatch();

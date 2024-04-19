@@ -1,4 +1,5 @@
-import { RootState } from '@/lib/store';
+
+import { RootState } from '@/lib/features/home/card/store';
 import { useSelector } from 'react-redux';
 
 export default function SearchResult(){

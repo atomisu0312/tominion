@@ -1,6 +1,7 @@
+'use client'
 import {setCostMin, setCostMax} from '@/lib/features/home/card/search/seachSlice'
-import type { RootState } from '@/lib/store';
-import {useAppDispatch, useAppSelector, useAppStore} from '@/lib/hooks'
+import type { RootState } from '@/lib/features/home/card/store';
+import {useAppDispatch, useAppSelector} from '@/lib/hooks'
 import Coin from './cost/coin';
 export default function Cost(){
   const dispatch = useAppDispatch();
