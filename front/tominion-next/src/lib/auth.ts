@@ -1,8 +1,8 @@
 import NextAuth from "next-auth";
-import GitHub from "next-auth/providers/github";
+import github from "next-auth/providers/github";
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
-  providers: [GitHub],
+  providers: [github],
   callbacks: {
     authorized({ request, auth }) {
       const { pathname } = request.nextUrl;
