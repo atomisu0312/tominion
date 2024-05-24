@@ -1,7 +1,7 @@
 import { CardOwner } from "@/lib/features/home/card/search/cardOwner";
 import { handleCardOwner } from "@/lib/features/home/card/search/seachSlice";
 import { useAppDispatch } from "@/lib/hooks";
-import { RootState } from "@/lib/store";
+import { RootState } from "@/lib/features/home/card/store";
 import { MouseEventHandler } from "react";
 import { useSelector } from "react-redux";
 

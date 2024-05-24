@@ -1,4 +1,4 @@
-import {useAppDispatch, useAppSelector, useAppStore} from '@/lib/hooks'
+import {useAppDispatch, useAppSelector} from '@/lib/hooks'
 
 import '@/app/ui/common/css/button.css'
 import { CardKind } from "@/lib/features/home/card/search/cardKind";

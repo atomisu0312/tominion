@@ -15,11 +15,7 @@ export default function AttrSelectButton({labelStr, cardAttribute}:Props){
   const handleClick: MouseEventHandler<HTMLButtonElement> = (e) => {
     dispatch(handleCardAttributeList(cardAttribute));
   };
-
-  //const cardKindList = useAppSelector((state) => state.cardSearch.cardKindList);
-  //const isCardKindSelected = cardKindList.includes(cardKind);
-
-  //const buttonClassName = "hexagon-button relative transform " + (isCardKindSelected ? "bg-red-500" : "bg-green-500");
+  
   const attrList = useAppSelector((state) => state.cardSearch.cardAttributeList);
   const isSelected = attrList.includes(cardAttribute);
 

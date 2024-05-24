@@ -1,8 +1,8 @@
-import {useAppDispatch, useAppSelector, useAppStore} from '@/lib/hooks'
+import {useAppDispatch, useAppSelector} from '@/lib/hooks'
 import {setCostMinMax} from '@/lib/features/home/card/search/seachSlice'
 import { MouseEventHandler } from 'react';
 import { useSelector } from 'react-redux';
-import { RootState } from '@/lib/store';
+import { RootState } from '@/lib/features/home/card/store'; // Replace '@/lib/store' with the correct file path
 
 interface Props {
   valueNum: number;
@@ -14,7 +14,7 @@ export default function Coin({valueNum}:Props){
   const handleClick: MouseEventHandler<HTMLButtonElement> = (e) => {
     dispatch(setCostMinMax(valueNum));
   };
-  const classNameBase = "rounded-full h-16 w-16"
+  const classNameBase = "rounded-full h-8 w-8"
   const checkedColor = "bg-red-500";
   const unCheckedColor = "bg-yellow-500";
   

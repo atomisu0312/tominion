@@ -10,8 +10,8 @@
 }
 
 .hexagon-button-lg {
-  width: 200px;
-  height: 75px;
+  width: 150px;
+  height: 50px;
   position: relative;
   clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%) ;
   display: flex;
