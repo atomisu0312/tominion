@@ -1,7 +1,7 @@
 'use client'
 import { useDebouncedCallback } from 'use-debounce';
 import { setSearchWord } from '@/lib/features/home/card/search/seachSlice'
-import { useAppDispatch, useAppSelector } from '@/lib/hooks'
+import { useAppDispatch } from '@/lib/hooks'
 import HugeSearchArea from '@/components/common/molecules/hugeSearchArea';
 
 export default function Namebox(){

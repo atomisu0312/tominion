@@ -7,9 +7,9 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
 }
 
 /**
-  * HugeSearchArea component
-  * @param {string} placeholder - プレースホルダー
-  * @param {React.ChangeEventHandler<HTMLInputElement>} onChange - 入力時のイベントハンドラ
+  * とてもでかい検索エリア
+  * @param {string} placeholder プレースホルダー
+  * @param {React.ChangeEventHandler<HTMLInputElement>} onChange 入力時のイベントハンドラ
   */
 export default function HugeSearchArea({placeholder, onChange, ...rest}: Props) {
   return(
