@@ -1,4 +1,4 @@
-import { RectangleButtonLg } from "../../atoms/hexagonButton";
+import { HexagonButtonLg } from "../../atoms/hexagonButton";
 
 interface Props {
   text: string;
@@ -8,6 +8,6 @@ interface Props {
 
 export default function RectangleMarine({ text, checked=false, handleClick, ...rest }: Props) {
   return(
-    <RectangleButtonLg text={text} handleClick={handleClick} color={checked ? "bg-red-500" : "bg-blue-500"}/>
+    <HexagonButtonLg text={text} handleClick={handleClick} color={checked ? "bg-red-500" : "bg-blue-500"}/>
   )
 }

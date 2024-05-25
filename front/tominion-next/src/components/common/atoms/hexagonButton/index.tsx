@@ -6,7 +6,7 @@ interface Props extends React.InputHTMLAttributes<HTMLButtonElement> {
   color?: string;
 }
 
-export function RectangleButtonLg({text, handleClick, color = "bg-red-500", ...rest }: Props) {
+export function HexagonButtonLg({text, handleClick, color = "bg-red-500", ...rest }: Props) {
   const buttonClassName = `hexagon-button-lg relative transform ${color}`
 
   return (
@@ -20,7 +20,7 @@ export function RectangleButtonLg({text, handleClick, color = "bg-red-500", ...r
   )
 }
 
-export function RectangleButton({text, handleClick, color = "bg-red-500", ...rest }: Props) {
+export function HexagonButton({text, handleClick, color = "bg-red-500", ...rest }: Props) {
   const buttonClassName = `hexagon-button relative transform ${color}`
 
   return (

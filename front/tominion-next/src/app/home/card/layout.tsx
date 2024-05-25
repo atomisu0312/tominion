@@ -1,4 +1,4 @@
-import Header from '@/app/ui/card/header'
+import Header from '@/components/home/card/header/template'
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div>
