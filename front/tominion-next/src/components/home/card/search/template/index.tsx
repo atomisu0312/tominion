@@ -8,7 +8,7 @@ export default function SearchArea(){
   <>
     <div className="flex flex-row justify-center h-[10vh] my-3">
       <div className="w-full mx-3 min-h-[10vh]">
-          <NameBox/>
+        <NameBox/>
       </div>
     </div>
     <div className="flex flex-row justify-center h-[20vh]">
