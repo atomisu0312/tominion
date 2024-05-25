@@ -1,3 +1,5 @@
+import "./style.css"
+
 interface Props extends React.InputHTMLAttributes<HTMLButtonElement> {
   text: string;
   handleClick?: React.MouseEventHandler<HTMLButtonElement>;
