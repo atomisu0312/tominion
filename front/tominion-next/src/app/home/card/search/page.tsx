@@ -1,7 +1,6 @@
 'use client'
 import StoreProvider from '@/app/home/card/StoreProvider'
-import SearchResult from '@/app/ui/card/search/searchResult';
-import SearchArea from '@/components/home/card/search/template';
+import {SearchArea, SearchResult} from '@/components/home/card/search/template';
 
 export default function Page() {
   return (

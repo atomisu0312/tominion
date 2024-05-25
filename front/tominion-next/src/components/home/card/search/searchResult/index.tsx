@@ -1,8 +1,7 @@
-
 import { RootState } from '@/lib/features/home/card/store';
 import { useSelector } from 'react-redux';
 
-export default function SearchResult(){
+export default function SearchResultTable(){
   const costMin = useSelector((state: RootState) => state.cardSearch.costMin);
   const costMax = useSelector((state: RootState) => state.cardSearch.costMax);
   const searchWord = useSelector((state: RootState) => state.cardSearch.searchWord);

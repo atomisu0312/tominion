@@ -2,8 +2,9 @@ import NameBox from "@/components/home/card/search/nameBox";
 import Cost from "@/components/home/card/search/cost";
 import CardKind from "@/app/ui/card/search/cardKind";
 import Owner from "@/components/home/card/search/ownerShip";
+import SearchResultTable from "../searchResult";
 
-export default function SearchArea(){
+function SearchArea(){
   return(
   <>
     <div className="flex flex-row justify-center h-[10vh] my-3">
@@ -22,3 +23,12 @@ export default function SearchArea(){
     </div>
   </>)
 } 
+
+function SearchResult(){
+  return(
+  <>
+    <SearchResultTable/>
+  </>
+  )}
+
+export {SearchArea, SearchResult}
