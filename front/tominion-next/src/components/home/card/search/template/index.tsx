@@ -1,7 +1,7 @@
 import NameBox from "@/components/home/card/search/nameBox";
 import Cost from "@/components/home/card/search/cost";
 import CardKind from "@/app/ui/card/search/cardKind";
-import Owner from "@/app/ui/card/search/owner";
+import Owner from "@/components/home/card/search/ownerShip";
 
 export default function SearchArea(){
   return(

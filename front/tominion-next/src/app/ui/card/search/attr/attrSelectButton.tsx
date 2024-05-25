@@ -2,7 +2,7 @@ import { CardAttribute } from "@/lib/features/home/card/search/cardAttribute";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import { MouseEventHandler } from "react";
 import { handleCardAttributeList } from "@/lib/features/home/card/search/seachSlice";
-import '@/app/ui/common/css/button.css'
+import '@/components/common/atoms/hexagonButton'
 
 interface Props {
   labelStr: string;
