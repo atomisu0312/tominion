@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import type { PayloadAction } from "@reduxjs/toolkit";
-import type { CardKind } from "@/lib/features/home/card/search/cardKind";
-import type { CardAttribute } from "@/lib/features/home/card/search/cardAttribute";
+import { PayloadAction } from "@reduxjs/toolkit";
+import { CardKind } from "@/lib/features/home/card/search/cardKind";
+import { CardAttribute } from "@/lib/features/home/card/search/cardAttribute";
+import { CardOwner } from "@/lib/features/home/card/search/cardOwner";
 
 type State ={
   costMin: undefined | number;
@@ -9,6 +10,7 @@ type State ={
   searchWord: undefined | String;
   cardKindList: CardKind[];
   cardAttributeList: CardAttribute[];
+  cardOwner: CardOwner;
 }
 
 const initialState: State = {
@@ -17,6 +19,7 @@ const initialState: State = {
   searchWord: undefined,
   cardKindList: [],
   cardAttributeList: [],
+  cardOwner: CardOwner.EveryOne,
 }
 
 export const searchSlice =  createSlice({
@@ -61,9 +64,12 @@ export const searchSlice =  createSlice({
       }else{
         state.cardAttributeList.splice(index, 1);
       }
+    },
+    handleCardOwner:(state, action:PayloadAction<CardOwner>) => {
+      state.cardOwner = action.payload;
     }
 
   }
 });
-export const {setCostMin, setCostMax, setCostMinMax, setSearchWord, handleCardKindList, handleCardAttributeList} = searchSlice.actions;
+export const {setCostMin, setCostMax, setCostMinMax, setSearchWord, handleCardKindList, handleCardAttributeList, handleCardOwner} = searchSlice.actions;
 export default searchSlice.reducer;

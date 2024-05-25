@@ -1,6 +1,6 @@
-import {useAppDispatch, useAppSelector, useAppStore} from '@/lib/hooks'
+import {useAppDispatch, useAppSelector} from '@/lib/hooks'
 
-import './button.css'
+import '@/components/common/atoms/hexagonButton'
 import { CardKind } from "@/lib/features/home/card/search/cardKind";
 import { MouseEventHandler } from 'react';
 import {handleCardKindList} from '@/lib/features/home/card/search/seachSlice'

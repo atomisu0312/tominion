@@ -1,12 +1,13 @@
-import { RootState } from '@/lib/store';
+import { RootState } from '@/lib/features/home/card/store';
 import { useSelector } from 'react-redux';
 
-export default function SearchResult(){
+export default function SearchResultTable(){
   const costMin = useSelector((state: RootState) => state.cardSearch.costMin);
   const costMax = useSelector((state: RootState) => state.cardSearch.costMax);
   const searchWord = useSelector((state: RootState) => state.cardSearch.searchWord);
   const cardKindList = useSelector((state: RootState) => state.cardSearch.cardKindList);
   const cardAttributeList = useSelector((state: RootState) => state.cardSearch.cardAttributeList);
+  const cardOwner = useSelector((state: RootState) => state.cardSearch.cardOwner);
 
   return(
   <>
@@ -23,6 +24,9 @@ export default function SearchResult(){
     </div>
     <div className = "w-full">
       <span>{`属性：${cardAttributeList}`}</span>
+    </div>
+    <div className = "w-full">
+      <span>{`オーナー：${cardOwner}`}</span>
     </div>
   </>)
 } 
