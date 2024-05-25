@@ -1,7 +1,9 @@
 import NameBox from "@/components/home/card/search/nameBox";
 import Cost from "@/components/home/card/search/cost";
-import CardKind from "@/app/ui/card/search/cardKind";
 import Owner from "@/components/home/card/search/ownerShip";
+import Kind from "@/components/home/card/search/kind";
+import Attr from "@/components/home/card/search/attr";
+
 import SearchResultTable from "../searchResult";
 
 function SearchArea(){
@@ -17,8 +19,11 @@ function SearchArea(){
         <Cost/>
         <Owner/>
       </div>
-      <div className="flex flex-col justify-start w-1/3 mx-3 h-full">
-          <CardKind/>
+      <div className="flex flex-col justify-start w-1/6 mx-1 h-full">
+        <Kind/>
+      </div>
+      <div className="flex flex-col justify-start w-1/6 mx-1 h-full">
+        <Attr/>
       </div>
     </div>
   </>)

@@ -3,5 +3,8 @@ interface Props {
 }
 
 export default function BlockText({name}: Props){
-  return (<span className="block text-center">{name}</span>) 
+  return (    
+  <div className="flex items-center justify-center h-full">
+    <span className="text-center">{name}</span>
+  </div>) 
 }
